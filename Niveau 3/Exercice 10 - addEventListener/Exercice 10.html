@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 10</title>
+</head>
+<body>
+<button id="bouton">Cliquez-moi</button>
+<script type="text/javascript">
+    let btn = document.getElementById("bouton");
+
+    btn.addEventListener("click", function () {
+        if (btn.innerHTML === "Cliquez-moi"){
+            btn.innerHTML = 'Vous m\'avez cliqué';
+        } else if (btn.innerHTML === 'Vous m\'avez cliqué'){
+            btn.innerHTML = 'Cliquez-moi';
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+<!--# Objectif
+Modifier la structure DOM avec addEventListener()
+
+# Enoncé
+Créez une page contenant un bouton dont le texte est "Cliquez-moi" et ayant comme id la valeur "bouton1".
+
+À l'aide d'addEventListener(), faites en sorte que lorsque l'utilisateur clique sur ce bouton,
+son texte passe de "Cliquez-moi" à "Vous m'avez cliqué". Si l'utilisateur clique à nouveau sur ce bouton, le texte redevient "Cliquez-moi".-->
+
+
+<!--
+let bouton = document.getElementById('bouton1');
+
+
+bouton.addEventListener('click', changebutton);
+
+function changebutton() {
+if (bouton.value === "Cliquez moi!") {
+bouton.value = "j'ai été cliqué"
+}
+else {
+bouton.value = "Cliquez moi!"
+}
+}-->
