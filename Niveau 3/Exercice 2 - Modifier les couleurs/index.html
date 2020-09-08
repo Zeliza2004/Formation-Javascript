@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Exercice 2</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#bloc1 {
+			width: 500px ;
+			height: 400px ;
+			background-color: lightblue ;
+		}
+		#paragraphe1 {
+			color: green ;
+		}
+		#paragraphe2 {
+			color: #ff0000;
+		}
+		.color2 {
+			background-color: yellow!important;
+		}
+		.text-black {
+			color: black!important;
+		}
+		.text-white {
+			color: white!important;
+		}
+	</style>
+</head>
+<body>
+	<div id="bloc1">
+		<p id="paragraphe1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		
+		<p id="paragraphe2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+	<button id="button1">Modifier fond</button>
+	<button id="button2">Modifier texte</button>
+	<script type="text/javascript">
+
+		let block = document.getElementById("bloc1")
+		let para1 = document.getElementById("paragraphe1")
+		let para2 = document.getElementById("paragraphe2")
+		let btn1 = document.getElementById("button1")
+		let btn2 = document.getElementById("button2")
+		let para = document.getElementsByTagName("p")
+
+		btn1.addEventListener("click", function () {
+			if (!block.classList.contains("color2")) {
+				block.classList.add("color2")
+			}
+			else {
+				block.classList.remove("color2")
+			}
+		})
+		btn2.addEventListener("click", function () {
+			for(let i = 0;i < para.length; i++){
+				if (!para[i].classList.contains("text-black")) {
+					para[i].classList.add("text-black")
+				}
+				else {
+					para[i].classList.remove("text-black")
+				}
+			}
+		})
+
+		for(let i = 0;i < para.length; i++){
+			para[i].addEventListener('mouseenter', function() {
+				this.classList.add("text-white")
+			})
+			para[i].addEventListener('mouseleave', function() {
+				this.classList.remove("text-white")
+			})
+		}
+
+
+
+		/*1) En cliquant sur le bouton "Modifier fond", le fond du bloc devient jaune
+		2) En cliquant sur le bouton "Modifier texte", tout le texte devient noir
+		3) En survolant l'un des deux paragraphes, la couleur du texte de ce paragraphe (uniquement) devient blanche. En quittant la zone, le texte récupère sa couleur originelle.
+*/
+	</script>
+</body>
+</html>

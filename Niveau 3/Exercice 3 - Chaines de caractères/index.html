@@ -1,0 +1,42 @@
+    <!doctype html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+    <div >
+        <p contenteditable="true"  id="exe1">Bonjour</p>
+        <button onclick="str_fisrt_letter(document.getElementById('exe1').innerHTML)">Tester</button>
+        <p id="resultat1"></p>
+    </div>
+    <div>
+        <p contenteditable="true" id="exe2">monadress@exe@lib.com</p>
+        <button onclick="str_email(document.getElementById('exe2').innerHTML)">Tester</button>
+        <p id="resultat2"></p>
+
+    </div>
+
+    <div >
+        <p contenteditable="true" id="exe3">12test</p>
+       <button onclick="str_number(document.getElementById('exe3').innerHTML)">Tester</button>
+        <p id="resultat3"></p>
+   </div>
+    <div >
+        <p contenteditable="true" id="exe4">bon7jour8812</p>
+        <button onclick="str_replace(document.getElementById('exe4').innerHTML)">Tester</button>
+        <p id="resultat4"></p>
+    </div>
+        <script src="script.js"></script>
+
+    </body>
+    </html>
+
+
+
+
+
