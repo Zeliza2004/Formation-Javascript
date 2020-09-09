@@ -1,0 +1,16 @@
+$(document).ready(function(){
+    $(".cellule").click(function(){
+        $(this).toggleClass("plein");})
+    $("#bouton1").click(function(){
+        $(".cellule").toggleClass('plein');})
+    $("#cellule1").click(function(){
+        $("#cellule2,#cellule3,#cellule4,#cellule5").toggleClass('plein');})
+    $("#cellule7").click(function(){
+        $("#cellule6,#cellule8,#cellule9,#cellule10").toggleClass('plein');})
+    $("#cellule13").click(function(){
+        $("#cellule11,#cellule12,#cellule14,#cellule15,#cellule3,#cellule8,#cellule18,#cellule23").toggleClass('plein');})
+    $("#cellule19").click(function(){
+        $("#cellule16,#cellule17,#cellule18,#cellule20").toggleClass('plein');})
+    $("#cellule25").click(function(){
+        $("#cellule21,#cellule22,#cellule23,#cellule24").toggleClass('plein');})
+})

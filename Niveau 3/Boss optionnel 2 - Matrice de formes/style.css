@@ -1,0 +1,44 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 30px;
+    padding: 20px;
+    width: 70%;
+}
+
+.grid-container > div {
+    border: 1px solid darkviolet;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#cellule1, #cellule7, #cellule19, #cellule25{
+    border: 1px solid darkviolet;
+    height: 150px;
+    width: 150px;
+    border-radius: 0;
+}
+#cellule13{
+    border: 1px solid darkviolet;
+    height: 150px;
+    width: 150px;
+    border-radius: 0;
+    transform: rotate(45deg) scale(0.8);
+}
+.bouton1{
+    width: 70%;
+}
+#bouton1{
+    background-color: darkcyan;
+    color: cornsilk;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.plein {
+    background-color: cyan;}
+
