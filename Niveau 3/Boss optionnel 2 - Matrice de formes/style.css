@@ -40,5 +40,14 @@
 
 
 .plein {
-    background-color: cyan;}
-
+    background-color: yellow;
+    animation-name: example;
+    animation-duration: 15s;
+}
+@keyframes example {
+    0%   {background-color: yellow;}
+    20%  {background-color: orange;}
+    40%  {background-color: red;}
+    60% {background-color: orange;}
+    80%   {background-color: yellow;}
+}
